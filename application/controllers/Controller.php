@@ -66,3 +66,14 @@ public function listInvoiceTempahan() {
         $data['cb']        = $this->mdl->cekbom2();
         $this->load->view('user/spkMasal', $data);
     }
+	
+	public function ferdian()
+    {
+        $data['listSPK']   = $this->mdl->listSPKMasal();
+        //$data['cekbom'] = $this->mdl->cekbom();
+        $data['cekjadwal'] = $this->mdl->cekjadwal2();
+        $data['klot']      = $this->mdl->getKloterSPK();
+        $data['ceksub']    = $this->mdl->cekSubSPK();
+        $data['cb']        = $this->mdl->cekbom2();
+        $this->load->view('user/spkMasal', $data);
+    }
